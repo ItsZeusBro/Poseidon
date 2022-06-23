@@ -23,7 +23,7 @@ Some plugins natuarally demand enough attention to call themselves eco-system pl
                     someStack: poseidon.Stack,
                   },
                   methods:{
-                    init: init(self.someStack, data)
+                    init: poseidon.init(self.someStack, data)
                     push: poseidon.push()
                     pop: poseidon.pop()
                   }
