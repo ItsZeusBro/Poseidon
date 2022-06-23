@@ -10,3 +10,24 @@ Poseidon Plugins will give you the implementation of choice that works with the 
 Naturally, Abstract Datatypes are collections of various sorts with different interfaces. Each of these Abstract Datatypes are Poseidon Syntax Plugins.
 Some plugins natuarally demand enough attention to call themselves eco-system plugins. This is one of these. Poseidon uses the Hydra Ecosystem Plug Library. This enables you to create highly integratable and familiar plug architectures, with high code reuse.
 
+
+### What the Syntax might look like:
+    {
+        @ some/path/to/data.poseidon as data
+
+        hydra:{
+            objName:{
+                  plugin: poseidon
+                  type: class,
+                  props:{
+                    someStack: poseidon.Stack,
+                  },
+                  methods:{
+                    init: init(self.someStack, data)
+                    push: poseidon.push()
+                    pop: poseidon.pop()
+                  }
+             }
+
+         }
+    }
