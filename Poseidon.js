@@ -35,6 +35,10 @@ export class df{
 	}
 
 	sort(rc, index, reverse=false){
+		//if rc is a positive number, its rowise on row represented by number
+		//if rc is a negative number, its colwise on col represented by number
+		//if rc is + string, its searches the row indexes for the string
+		//if rc is - string, it searches the col indexes for the string
 		//if strings, sorts alphabetically
 		//if numbers, sorts numerically
 		//if rowStep, (if you have the same values in row one, sort those rows on row 2, etc)
