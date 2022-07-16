@@ -1,5 +1,10 @@
 class _Series{
-    constructor(){
+    constructor(data){
+        //check schema
+        //then set
+    }
+
+    check(data){
 
     }
 
@@ -12,6 +17,7 @@ class _Series{
 
 //"that's how it looks in a dataframe" row or column with a comma, but not both
 //  '[r],[c]': {
+//              "metadata":{},
 //              "indexName":[]
 //         }
 
@@ -24,3 +30,4 @@ class _Series{
 
 //Doing it this way separates the math from the getter setter logic, which means we can
 //still be efficient with the math and keep accessors simple
+
