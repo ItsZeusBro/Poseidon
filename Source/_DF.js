@@ -54,7 +54,11 @@ class _DF{
 	_readAndSliceFromJSON(file, row, col){}
 	_readAndSliceFromXML(file, row, col){}
 
+	_findRowsWithValOnSlice(df, val, row, col){}//keeps indexes in tact
+	_findColsWithValOnSlice(df, val, row, col){}//keeps indexes in tact
 
+	_reIndex(){}
+	_indexShift(){}
 
 	_groupOnRowIndexGreedyRepl(indexName, replVal){}
 	_groupOnColIndexGreedyRepl(indexName, replVal){}

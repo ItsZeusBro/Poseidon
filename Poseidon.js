@@ -6,7 +6,7 @@ export class df{
 		//every function has to return a new df initialized with the
 		//schema of the df operation
 	}
-	
+
 	//df can be a file or an actual df, or self if left undefined
 	//reading can also merge
 	read(df, rc1, rc2){
@@ -40,6 +40,7 @@ export class df{
 		//and the original row numbers
 	}
 
+	index(){}//creates new index and preserves old index beside it
 	sort(rc, reverse=false, step=false){
 		//  (time values are sortable)
 		//	step, (if you have the same values in row one, sort those rows on row 2, etc)
