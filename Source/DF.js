@@ -57,47 +57,82 @@ class DF{
 	groupOn(rc='row', indexName, maxrc, replVal=undefined, rFirst=true){
 		//rc can be row, col or both
 		if(rc=='row'){
-			// this.groupOnRow('someName', '2', replVal='someotherName')
-			// this.groupOnRow('someName', '2', replVal=undefined)
-			// this.groupOnRow('someName', 'greedy', replVal='someotherName')
-			// this.groupOnRow('someName', 'greedy', replVal=undefined)
-			// this.groupOnRow(undefined, '2', replVal='someotherName')
-			// this.groupOnRow(undefined, '2', replVal=undefined)
-			// this.groupOnRow(undefined, 'greedy', replVal='someotherName')
-			// this.groupOnRow(undefined, 'greedy', replVal=undefined)
+			if(indexName){
+				if(maxrc=='greedy'){
+					// this.groupOnRow('someName', 'greedy', replVal='someotherName')
+					// this.groupOnRow('someName', 'greedy', replVal=undefined)
+				}else if(Number.isInteger(maxrc)){
+					// this.groupOnRow('someName', '2', replVal='someotherName')
+					// this.groupOnRow('someName', '2', replVal=undefined)
+				}
+
+			}else{
+				if(maxrc=="greedy"){
+					// this.groupOnRow(undefined, 'greedy', replVal='someotherName')
+					// this.groupOnRow(undefined, 'greedy', replVal=undefined)
+				}else if(Number.isInteger(maxrc)){
+					// this.groupOnRow(undefined, '2', replVal='someotherName')
+					// this.groupOnRow(undefined, '2', replVal=undefined)
+				}
+			}
+			
 		}else if(rc=='col'){
-			// this.groupOnCol('someName', '2', replVal='someotherName')
-			// this.groupOnCol('someName', '2', replVal=undefined)
-			// this.groupOnCol('someName', 'greedy', replVal='someotherName')
-			// this.groupOnCol('someName', 'greedy', replVal=undefined)
-			// this.groupOnCol(undefined, '2', replVal='someotherName')
-			// this.groupOnCol(undefined, '2', replVal=undefined)
-			// this.groupOnCol(undefined, 'greedy', replVal='someotherName')
-			// this.groupOnCol(undefined, 'greedy', replVal=undefined)
+			if(indexName){
+				if(maxrc=='greedy'){
+					// this.groupOnCol('someName', 'greedy', replVal='someotherName')
+					// this.groupOnCol('someName', 'greedy', replVal=undefined)
+				}else if(Number.isInteger(maxrc)){
+					// this.groupOnCol('someName', '2', replVal='someotherName')
+					// this.groupOnCol('someName', '2', replVal=undefined)
+				}
+			}else{
+				if(maxrc=="greedy"){
+					// this.groupOnCol(undefined, 'greedy', replVal='someotherName')
+					// this.groupOnCol(undefined, 'greedy', replVal=undefined)
+				}else if(Number.isInteger(maxrc)){
+					// this.groupOnCol(undefined, '2', replVal='someotherName')
+					// this.groupOnCol(undefined, '2', replVal=undefined)
+				}else{
+					throw Error('you need a fucking manual for this shit')
+				}
+			}
+			
 		}else{
-			// this.groupOnCol('someName', '2', replVal='someotherName')
-			// this.groupOnRow('someName', '2', replVal='someotherName')
+			if(indexName){
+				if(maxrc=='greedy'){
+					// this.groupOnCol('someName', 'greedy', replVal='someotherName')
+					// this.groupOnRow('someName', 'greedy', replVal='someotherName')
 
-			// this.groupOnCol('someName', '2', replVal=undefined)
-			// this.groupOnRow('someName', '2', replVal=undefined)
+					// this.groupOnCol('someName', 'greedy', replVal=undefined)
+					// this.groupOnRow('someName', 'greedy', replVal=undefined)
+				}else if(Number.isInteger(maxrc)){
+					// this.groupOnCol('someName', '2', replVal='someotherName')
+					// this.groupOnRow('someName', '2', replVal='someotherName')
 
-			// this.groupOnCol('someName', 'greedy', replVal='someotherName')
-			// this.groupOnRow('someName', 'greedy', replVal='someotherName')
+					// this.groupOnCol('someName', '2', replVal=undefined)
+					// this.groupOnRow('someName', '2', replVal=undefined)
+				}else{
+					throw Error('you need a fucking manual for this shit')
+				}
+				
+			}else{
+				if(maxrc=='greedy'){
+					// this.groupOnCol(undefined, 'greedy', replVal='someotherName')
+					// this.groupOnRow(undefined, 'greedy', replVal='someotherName')
 
-			// this.groupOnCol('someName', 'greedy', replVal=undefined)
-			// this.groupOnRow('someName', 'greedy', replVal=undefined)
+					// this.groupOnCol(undefined, 'greedy', replVal=undefined)
+					// this.groupOnRow(undefined, 'greedy', replVal=undefined)
+				}else if(Number.isInteger(maxrc)){
+					// this.groupOnCol(undefined, '2', replVal='someotherName')
+					// this.groupOnRow(undefined, '2', replVal='someotherName')
 
-			// this.groupOnCol(undefined, '2', replVal='someotherName')
-			// this.groupOnRow(undefined, '2', replVal='someotherName')
+					// this.groupOnCol(undefined, '2', replVal=undefined)
+					// this.groupOnRow(undefined, '2', replVal=undefined)
+				}else{
+					throw Error('you need a fucking manual for this shit')
+				}
 
-			// this.groupOnCol(undefined, '2', replVal=undefined)
-			// this.groupOnRow(undefined, '2', replVal=undefined)
-
-			// this.groupOnCol(undefined, 'greedy', replVal='someotherName')
-			// this.groupOnRow(undefined, 'greedy', replVal='someotherName')
-
-			// this.groupOnCol(undefined, 'greedy', replVal=undefined)
-			// this.groupOnRow(undefined, 'greedy', replVal=undefined)
+			}
 			
 		}
 		
