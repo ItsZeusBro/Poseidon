@@ -6,6 +6,7 @@ export class df{
 		//every function has to return a new df initialized with the
 		//schema of the df operation
 	}
+	
 	//df can be a file or an actual df, or self if left undefined
 	//reading can also merge
 	read(df, rc1, rc2){
@@ -15,12 +16,15 @@ export class df{
 		//if you specifiy rc, it overwrites a slice of the read df
 		//to the df you are writing to
 	}
+
 	write(df, rc1, rc2){
 		//writes to a file or another df from a source 
 	}
+
 	slice(rc){
 		//this basically slices the dataframe according to rc
 	}
+
 	dice(rc){
 		//shuffles a slice and returns it as a df
 	}
@@ -69,10 +73,13 @@ export class df{
 		//9. find within a time slice
 		//10. describe a time slice
 		//11. write from a time slice
-	}
-	interp(){
 
 	}
+
+	interp(){
+		
+	}
+
 	plot(){
 		
 	}
@@ -80,6 +87,7 @@ export class df{
 	flip(){
 
 	}
+
 	rotate(){
 		
 	}
@@ -279,6 +287,7 @@ export class df{
 			throw Error("rc must be row, col, or undefined")
 		}
 	}
+
 	display(){
 		//this gets called by notebooks after a df is returned
 		//it returns the schema of the df that is returned
