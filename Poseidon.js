@@ -56,6 +56,8 @@ export class df{
 		//Things we can do:
 			//primitive actions
 		//1. reformatting on an index or a slice with a time index
+		//2. rolling windows (an iterator that returns
+		// data frames from a would be larger one over an arbitrary time window)
 			//compound actions
 		//2. Interpolate a slice by time values based on different average techniques(simple averages, moving averages, etc)
 		//3. groupping on the data over arbitrary time windows
