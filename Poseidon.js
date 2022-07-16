@@ -3,45 +3,26 @@ export class df{
 		this.df=undefined;
 
 	}
-	read(r, c){
-		//if r and c are defined, it will read a file and place into a slice
-		//of the dataframe (edge cases will be defined)
-		//If not defined it just overwrites the dataframe with new data
+	read(rc){
+
 	}
-	write(r, c){
-		//writes a slice of the dataframe if r or c or both are defined
+	write(rc){
+
 	}
-	slice(r, c){
-		//gets the first r number of rows if positive integer
-		//gets the last r number of rows if negative integer
-		//gets the first c number of cols if positive integer
-		//gets the last c number of cols if negative integer
+	slice(rc){
+
 	}
 
-	describe(r, c){
-		//describes a subsection of the dataframe, or
-		//if r and c are undefined, it describes the 
-		//whole thing very generally
+	describe(rc){
+
 	}
 
 	find(rc, value, n, m){
-		//if rc was r or c , and value was specified, it would search
-		//	for the value rowise or columnwise and return the row or col associated
-		//	if found using r, it would return all columns associated
-		//	if found using c, it would return all rows associated
 
-		//if n and or m are specified, it searches the slice setting
-		//begining of n m as 0,0
 	}
 
 	sort(rc, reverse=false, step=false){
-		//if rc is a positive number, its rowise on row represented by number
-		//if rc is a negative number, its colwise on col represented by number
-		//if rc is + string, its searches the row indexes for the string
-		//if rc is - string, it searches the col indexes for the string
-		//if strings, sorts alphabetically
-		//if numbers, sorts numerically
-		//if step, (if you have the same values in row one, sort those rows on row 2, etc)
+		//	step, (if you have the same values in row one, sort those rows on row 2, etc)
 		//	if you don't start from row 1, it wraps around until reaching row 1, etc.
 		
 		//+2:-4 is everything after row 2 and everything before col 4 (inclusive)
