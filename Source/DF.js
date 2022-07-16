@@ -53,16 +53,22 @@ class DF{
 	rotate(){
 		
 	}
+	//the col index in the example is "Grocery Type"
+	groupOn(rc='row', index='', maxrc='inf', replVal){
+		//groups on any row or col (rc must be specified) 
+		//	with the index value set by index, so long as they all share the same value //default if value shared
+		//if rc is not specified, return error
+		
+		//If they don't have the same index, replace the index value if specified 
+		//	otherwise returns the same df without change
 
-	groupOnCol(columnName, maxRows, replacementVal){
-		// groups on any column with columnName, so long as they all share the same value //default if value shared
-		// If they don't have the same value, you can replace the value	//expected if value not shared
-		//maxRows is set to infinity if not specified, and reorders the rows to fit the col group
+		//If index is not specified, then it groups on all r or c indicies that share the same index value 
+		
+		//maxrc is set to infinity if not specified, and reorders the r or c with the index value to fit the col group
 	}
 
-	groupOnRow(rowName, maxCols, replacementVal){
-		// groups on any row with rowName, so long as they all share the same value //default if value shared
-		// If they don't have the same value, you can replace the value	//expected if value not shared
-		//maxCols is set to infinity if not specified, and reorders the cols to fit the row group
+
+	getRowsOn(rowIndex){
+		//
 	}
 }
