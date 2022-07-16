@@ -34,19 +34,20 @@ export class df{
 		//begining of n m as 0,0
 	}
 
-	sort(rc, index, reverse=false, step=false){
+	sort(rc, reverse=false, step=false){
 		//if rc is a positive number, its rowise on row represented by number
 		//if rc is a negative number, its colwise on col represented by number
 		//if rc is + string, its searches the row indexes for the string
 		//if rc is - string, it searches the col indexes for the string
 		//if strings, sorts alphabetically
 		//if numbers, sorts numerically
-		//if rowStep, (if you have the same values in row one, sort those rows on row 2, etc)
+		//if step, (if you have the same values in row one, sort those rows on row 2, etc)
 		//	if you don't start from row 1, it wraps around until reaching row 1, etc.
 		
+		//+2:-4 is everything after row 2 and everything before col 4 (inclusive)
 	}
-	apply(){
-
+	apply(rc, callback){
+		// apply a function on rc
 	}
 
 	time(){
@@ -65,7 +66,7 @@ export class df{
 	}
 
 	//the col index in the example is "Grocery Type"
-	groupOn(rc='row', indexName, maxrc, replVal=undefined, rFirst=true){
+	groupOn(rc, indexName, maxrc, replVal=undefined, rFirst=true){
 		//rc can be row, col or both
 		if(rc=='row'){
 			if(typeof indexName === 'string'){
