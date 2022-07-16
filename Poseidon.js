@@ -202,10 +202,11 @@ export class DF{
 				if(maxrc=='greedy'){
 					if(typeof replVal === 'string'){
 						if(rFirst){
-
-
+							this._groupOnAllRowsGreedyRepl(replVal)
+							this._groupOnAllColsGreedyRepl(replVal)
 						}else{
-
+							this._groupOnAllColsGreedyRepl(replVal)
+							this._groupOnAllRowsGreedyRepl(replVal)
 						}
 
 					}else if(!replVal){
