@@ -3,24 +3,24 @@ export class df{
 		this.df=undefined;
 
 	}
-	read(n, m){
-		//if n and m are defined, it will read a file and place into a slice
+	read(r, c){
+		//if r and c are defined, it will read a file and place into a slice
 		//of the dataframe (edge cases will be defined)
 		//If not defined it just overwrites the dataframe with new data
 	}
-	write(n, m){
-		//writes a slice of the dataframe if n or m or both are defined
+	write(r, c){
+		//writes a slice of the dataframe if r or c or both are defined
 	}
-	slice(n, m){
-		//gets the first n number of rows if positive integer
-		//gets the last n number of rows if negative integer
-		//gets the first m number of cols if positive integer
-		//gets the last m number of cols if negative integer
+	slice(r, c){
+		//gets the first r number of rows if positive integer
+		//gets the last r number of rows if negative integer
+		//gets the first c number of cols if positive integer
+		//gets the last c number of cols if negative integer
 	}
 
-	describe(n, m){
+	describe(r, c){
 		//describes a subsection of the dataframe, or
-		//if n and m are undefined, it describes the 
+		//if r and c are undefined, it describes the 
 		//whole thing very generally
 	}
 
@@ -34,7 +34,7 @@ export class df{
 		//begining of n m as 0,0
 	}
 
-	sort(rc, index, reverse=false){
+	sort(rc, index, reverse=false, step=false){
 		//if rc is a positive number, its rowise on row represented by number
 		//if rc is a negative number, its colwise on col represented by number
 		//if rc is + string, its searches the row indexes for the string
@@ -43,6 +43,7 @@ export class df{
 		//if numbers, sorts numerically
 		//if rowStep, (if you have the same values in row one, sort those rows on row 2, etc)
 		//	if you don't start from row 1, it wraps around until reaching row 1, etc.
+		
 	}
 	apply(){
 
