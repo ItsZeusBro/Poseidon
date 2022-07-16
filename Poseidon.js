@@ -198,23 +198,43 @@ export class DF{
 				}else{
 					throw Error("maxrc needs to be an integer or 'greedy'")
 				}
-			}else{
+			}else if(!indexName){
 				if(maxrc=='greedy'){
 					if(typeof replVal === 'string'){
+						if(rFirst){
 
+
+						}else{
+
+						}
 
 					}else if(!replVal){
+						if(rFirst){
 
+
+						}else{
+
+						}
 
 					}else{
 						throw Error("replVal needs to be a string or undefined")
 					}
 				}else if(Number.isInteger(maxrc)){
 					if(typeof replVal === 'string'){
+						if(rFirst){
 
+
+						}else{
+
+						}
 
 					}else if(!replVal){
+						if(rFirst){
 
+
+						}else{
+
+						}
 
 					}else{
 						throw Error("replVal needs to be a string or undefined")
@@ -222,7 +242,10 @@ export class DF{
 				}else{
 					throw Error("maxrc needs to be an integer or 'greedy'")
 				}
+			}else{
+				throw Error("indexName needs to be defined as a string or as undefined")
 			}
+
 		}else{
 			throw Error("rc must be row, col, or undefined")
 		}
