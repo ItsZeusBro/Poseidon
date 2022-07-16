@@ -6,7 +6,7 @@ export class df{
 		//every function has to return a new df initialized with the
 		//schema of the df operation
 	}
-	//df can be a file or an actual df
+	//df can be a file or an actual df, or self if left undefined
 	read(df, rc1, rc2){
 		//reads from a file or another df
 		//under the hood the file is consumed by df class, and used as a df
