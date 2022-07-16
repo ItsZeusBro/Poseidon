@@ -7,6 +7,7 @@ export class df{
 		//schema of the df operation
 	}
 	//df can be a file or an actual df, or self if left undefined
+	//reading can also merge
 	read(df, rc1, rc2){
 		//reads from a file or another df
 		//under the hood the file is consumed by df class, and used as a df
@@ -53,15 +54,23 @@ export class df{
 		//2. Some rc values are recorded in time
 		//3. There are a variety of different time formats 
 		//Things we can do:
-		//1. Normalize time accross an index (changing the time format, or reducing precision)
-		//2. Interpolate time values based on different average techniques(simple averages, moving averages, etc)
-		//3. generalize the data over arbitrary time windows
-		//4. merging new rows based on time index
-		//5. slicing based on time index
+			//primitive actions
+		//1. reformatting on an index or a slice with a time index
+			//compound actions
+		//2. Interpolate a slice by time values based on different average techniques(simple averages, moving averages, etc)
+		//3. groupping on the data over arbitrary time windows
+		//4. merging a slice based on time index or value
+		//5. slicing based on time index or value (this would sort on time, calculate the slice, and then slice)
 		//6. sorting an index on time by index or by value (basically creatres a new index on time)
-		//7. 
+		//7. apply a function on a time slice
+		//8. sort on an arbitrary value within a time slice
+		//9. find within a time slice
+		//10. describe a time slice
+		//11. write from a time slice
 	}
+	interp(){
 
+	}
 	plot(){
 		
 	}
