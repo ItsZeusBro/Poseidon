@@ -54,17 +54,42 @@ class DF{
 		
 	}
 	//the col index in the example is "Grocery Type"
-	groupOn(rc='row', index='', maxrc='inf', replVal){
-		//groups on any row or col (rc must be specified) 
-		//	with the index value set by index, so long as they all share the same value //default if value shared
-		//if rc is not specified, return error
-		
-		//If they don't have the same index, replace the index value if specified 
-		//	otherwise returns the same df without change
+	groupOn(rc='row', indexName, maxrc, replVal=undefined, rFirst=true){
+		//rc can be row, col or both
+		if(rc=='row'){
 
-		//If index is not specified, then it groups on all r or c indicies that share the same index value 
-		
-		//maxrc is set to infinity if not specified, and reorders the r or c with the index value to fit the col group
+		}else if(rc=='col'){
+
+		}else{
+
+		}
+		// this.groupOnCol('someName', '2', replVal='someotherName')
+		// this.groupOnCol('someName', '2', replVal=undefined)
+		// this.groupOnCol('someName', 'greedy', replVal='someotherName')
+		// this.groupOnCol('someName', 'greedy', replVal=undefined)
+		// this.groupOnCol(undefined, '2', replVal='someotherName')
+		// this.groupOnCol(undefined, '2', replVal=undefined)
+		// this.groupOnCol(undefined, 'greedy', replVal='someotherName')
+		// this.groupOnCol(undefined, 'greedy', replVal=undefined)
+	
+		// this.groupOnRow('someName', '2', replVal='someotherName')
+		// this.groupOnRow('someName', '2', replVal=undefined)
+		// this.groupOnRow('someName', 'greedy', replVal='someotherName')
+		// this.groupOnRow('someName', 'greedy', replVal=undefined)
+		// this.groupOnRow(undefined, '2', replVal='someotherName')
+		// this.groupOnRow(undefined, '2', replVal=undefined)
+		// this.groupOnRow(undefined, 'greedy', replVal='someotherName')
+		// this.groupOnRow(undefined, 'greedy', replVal=undefined)
+	}
+
+
+	groupOnCol(colIndex, maxRow, replVal){
+		//groups one column at a time
+		//if replVal is specified, it will replace the value of the group index values
+		//	if it is not, it will group only on a named index value
+	}
+	groupOnRow(rowIndex, maxCol, repVal){
+		//groups one row at a time
 	}
 
 
