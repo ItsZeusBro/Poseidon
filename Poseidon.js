@@ -18,32 +18,48 @@ export class df{
 		//writes to a file or another df from a source 
 	}
 	slice(rc){
-
+		//this basically slices the dataframe according to rc
 	}
 	dice(rc){
 		//shuffles a slice and returns it as a df
 	}
 
 	describe(rc){
-
+		//describes a slice (value types, it should report row and col number just
+		//in case you made an off by one error)
 	}
 
-	find(rc, value, n, m){
-
+	find(rc, value){
+		//searches the slice space for the value
+		//and returns a df containing the values
+		//and the original row numbers
 	}
 
 	sort(rc, reverse=false, step=false){
+		//  (time values are sortable)
 		//	step, (if you have the same values in row one, sort those rows on row 2, etc)
 		//	if you don't start from row 1, it wraps around until reaching row 1, etc.
 		
 		//+2:-4 is everything after row 2 and everything before col 4 (inclusive)
 	}
 	apply(rc, callback){
-		// apply a function on rc
+		// apply a function on rc (all rows and cols are considered in the slice)
+		// programmer is responsible for knowing how general a slice can be
 	}
 
 	time(){
-
+		//Observations:
+		//1. Some rc values are indexed in time
+		//2. Some rc values are recorded in time
+		//3. There are a variety of different time formats 
+		//Things we can do:
+		//1. Normalize time accross an index
+		//2. Interpolate time values based on different average techniques(simple averages, moving averages, etc)
+		//3. generalize the data over arbitrary time windows
+		//4. merging new rows based on time index
+		//5. slicing based on time index
+		//6. sorting an index on time by index or by value (basically creatres a new index on time)
+		//7. 
 	}
 
 	plot(){
