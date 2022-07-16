@@ -1,44 +1,47 @@
-export class DF{
+export class df{
 	constructor(){
-		
-	}
-	readCsv(){
+		this.df=undefined;
 
 	}
-	head(){
-
+	read(n, m){
+		//if n and m are defined, it will read a file and place into a slice
+		//of the dataframe (edge cases will be defined)
+		//If not defined it just overwrites the dataframe with new data
 	}
-	tail(){
-
+	write(n, m){
+		//writes a slice of the dataframe if n or m or both are defined
 	}
-	describe(){
-
-	}
-	writeCsv(){
-
-	}
-	merge(){
-
-	}
-	groupBy(){
-
+	slice(n, m){
+		//gets the first n number of rows if positive integer
+		//gets the last n number of rows if negative integer
+		//gets the first m number of cols if positive integer
+		//gets the last m number of cols if negative integer
 	}
 
-	iloc(){
+	describe(n, m){
+		//describes a subsection of the dataframe, or
+		//if n and m are undefined, it describes the 
+		//whole thing very generally
+	}
+
+	find(rc, value, n, m){
+		//if rc was r or c, and value was specified, it would search
+		//	for the value rowise or columnwise and return the row or col associated
+		//	if found using r, it would return all columns associated
+		//	if found using c, it would return all rows associated
+
+		//if n and or m are specified, it searches the slice setting
+		//begining of n m as 0,0
+	}
+
+	sort(){
+
+	}
+	apply(){
 
 	}
 
-	loc(){
-
-	}
-	sortBy(){
-
-	}
-	applyTo(){
-
-	}
-
-	timeDelta(){
+	time(){
 
 	}
 
