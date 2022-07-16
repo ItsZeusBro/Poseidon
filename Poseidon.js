@@ -38,6 +38,7 @@ export class df{
 		//if strings, sorts alphabetically
 		//if numbers, sorts numerically
 		//if rowStep, (if you have the same values in row one, sort those rows on row 2, etc)
+		//	if you don't start from row 1, it wraps around until reaching row 1, etc.
 	}
 	apply(){
 
