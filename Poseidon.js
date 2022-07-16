@@ -10,7 +10,10 @@ export class df{
 
 	}
 	slice(rc){
-
+		
+	}
+	dice(rc){
+		//shuffles a slice
 	}
 
 	describe(rc){
