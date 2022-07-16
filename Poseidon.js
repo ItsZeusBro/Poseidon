@@ -3,6 +3,8 @@ export class df{
 		this.df=undefined;
 		//phaseology is a concept where you chain functions together and 
 		//see their phases in a scrollable list (in some sort of notebook)
+		//every function has to return a new df initialized with the
+		//schema of the df operation
 	}
 	read(rc){
 
@@ -14,7 +16,7 @@ export class df{
 
 	}
 	dice(rc){
-		//shuffles a slice
+		//shuffles a slice and returns it as a df
 	}
 
 	describe(rc){
@@ -244,6 +246,10 @@ export class df{
 		}else{
 			throw Error("rc must be row, col, or undefined")
 		}
+	}
+	display(){
+		//this gets called by notebooks after a df is returned
+		//it returns the schema of the df that is returned
 	}
 }
 
