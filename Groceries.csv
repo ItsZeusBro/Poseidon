@@ -1,0 +1,26 @@
+Groceries Shopping List,,,,,,
+Grocery Type,Description,item 1,item 2,item 3,item 4,item 5
+Fruit,Store,A,B,C,D,D
+,apple,granny smith,macintosh,red,green,yellow
+,qty,2,2,2,2,2
+,total price,$2.50,$2.45,$2.45,$2.45,$2.50
+Veggie,Store,B,B,D,A,
+,tomato,cherry,roma,better boy,san marzano,
+,qty,10,2,2,2,
+,total price,$2.00,$1.00,$1.20,$2.00,
+Fruit,Store,A,B,A,C,C
+,orange,valencia,cara cara,jaffa,blood orange,clementine
+,qty,2,2,2,2,2
+,total price,$2.50,$2.45,$2.45,$2.45,$2.50
+Dairy,Store,B,B,A,A,
+,Milk,goats,2%,Almond,Cashew,
+,qty,1,1,1,1,
+,total price,$2.00,$1.00,$1.20,$2.00,
+Dairy,Store,B,B,A,A,
+,Cheese,goat,gouda,cheddar,fetta,
+,qty,1,1,1,1,
+,total price,$2.00,$1.00,$1.20,$2.00,
+Wine,Store,J,J,,,
+,Red,Romanée-Conti (1945),Screaming Eagle (1992),,,
+,qty,1,2,,,
+,total price,"$558,000.00","$500,000.00",,,
