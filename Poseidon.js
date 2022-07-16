@@ -55,30 +55,161 @@ export class DF{
 
 	//the col index in the example is "Grocery Type"
 	groupOn(rc='row', indexName, maxrc, replVal=undefined, rFirst=true){
-		if(rc!='row'||rc!='col'||rc!=undefined){
-			throw Error("rc must be row, col, or undefined")
-		}
-		if(typeof indexName != 'string' || !indexName){
-			throw Error("indexName needs to be defined as a string or as undefined")
 
-		}
-		if(!Number.isInteger(maxrc)||maxrc!='greedy'){
-			throw Error("maxrc needs to be 'greedy' or an integer")
-		}
-		if(typeof replVal != 'string' || !replVal){
-			throw Error("replVal needs to be a string or undefined")
-		}
 		//rc can be row, col or both
 		if(rc=='row'){
-			this.groupOnRow(indexName, maxrc, replVal)
+			if(typeof indexName === 'string'){
+				if(maxrc=='greedy'){
+					if(typeof replVal === 'string'){
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else if(!replVal){
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+				}else if(Number.isInteger(maxrc)){
+					if(typeof replVal === 'string'){
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else if(!replVal){
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+
+				}else{
+					throw Error("maxrc needs to be 'greedy' or an integer")
+				}
+
+			}else if(!indexName){
+				if(maxrc=="greedy"){
+
+					if(typeof replVal === 'string'){
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else if(!replVal){
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+
+				}else if(Number.isInteger(maxrc)){
+
+					if(typeof replVal === 'string'){
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else if(!replVal){
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+				}else{
+					throw Error("maxrc needs to be 'greedy' or an integer")
+				}
+			}else{
+				throw Error("indexName needs to be defined as a string or as undefined")
+			}
+
 		}else if(rc=='col'){
-			this.groupOnCol(indexName, maxrc, replVal)
-		}else if(!rc && rFirst){
-			this.groupOnRow(indexName, maxrc, replVal)
-			this.groupOnCol(indexName, maxrc, replVal)
-		}else if(!rc && !rFirst){
-			this.groupOnCol(indexName, maxrc, replVal)
-			this.groupOnRow(indexName, maxrc, replVal)
+
+			if(typeof indexName === 'string'){
+				if(maxrc=='greedy'){
+					if(typeof replVal === 'string'){
+						this.groupOnCol(indexName, maxrc, replVal)
+
+					}else if(!replVal){
+						this.groupOnCol(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+
+				}else if(Number.isInteger(maxrc)){
+					if(typeof replVal === 'string'){
+						this.groupOnCol(indexName, maxrc, replVal)
+					}else if(!replVal){
+						this.groupOnCol(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+				}else{
+					throw Error("maxrc needs to be 'greedy' or an integer")
+				}
+
+			}else if(!indexName){
+
+				if(maxrc=="greedy"){
+					if(typeof replVal === 'string'){
+						this.groupOnCol(indexName, maxrc, replVal)
+
+					}else if(!replVal){
+						this.groupOnCol(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+				}else if(Number.isInteger(maxrc)){
+					if(typeof replVal === 'string'){
+						this.groupOnCol(indexName, maxrc, replVal)
+					}else if(!replVal){
+						this.groupOnCol(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+				}else{
+					throw Error("maxrc needs to be an integer or 'greedy'")
+				}
+
+			}else{
+				throw Error("indexName needs to be defined as a string or as undefined")
+			}
+		}else if(!rc){
+			if(indexName){
+				if(maxrc=='greedy'){
+					if(typeof replVal === 'string'){
+						this.groupOnCol(indexName, maxrc, replVal)
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else if(!replVal){
+						this.groupOnCol(indexName, maxrc, replVal)
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+				}else if(Number.isInteger(maxrc)){
+					if(typeof replVal === 'string'){
+						this.groupOnCol(indexName, maxrc, replVal)
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else if(!replVal){
+						this.groupOnCol(indexName, maxrc, replVal)
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+				}else{
+					throw Error("maxrc needs to be an integer or 'greedy'")
+				}
+			}else{
+				if(maxrc=='greedy'){
+					if(typeof replVal === 'string'){
+						this.groupOnCol(indexName, maxrc, replVal)
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else if(!replVal){
+						this.groupOnCol(indexName, maxrc, replVal)
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+				}else if(Number.isInteger(maxrc)){
+					if(typeof replVal === 'string'){
+						this.groupOnCol(indexName, maxrc, replVal)
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else if(!replVal){
+						this.groupOnCol(indexName, maxrc, replVal)
+						this.groupOnRow(indexName, maxrc, replVal)
+					}else{
+						throw Error("replVal needs to be a string or undefined")
+					}
+				}else{
+					throw Error("maxrc needs to be an integer or 'greedy'")
+				}
+			}
+		}else{
+			throw Error("rc must be row, col, or undefined")
 		}
 	}
 }
