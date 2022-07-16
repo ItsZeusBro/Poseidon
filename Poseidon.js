@@ -6,11 +6,16 @@ export class df{
 		//every function has to return a new df initialized with the
 		//schema of the df operation
 	}
-	read(rc){
-
+	//df can be a file or an actual df
+	read(df, rc1, rc2){
+		//reads from a file or another df
+		//under the hood the file is consumed by df class, and used as a df
+		//it doesn't destroy the original file
+		//if you specifiy rc, it overwrites a slice of the read df
+		//to the df you are writing to
 	}
-	write(rc){
-
+	write(df, rc1, rc2){
+		//writes to a file or another df from a source 
 	}
 	slice(rc){
 
