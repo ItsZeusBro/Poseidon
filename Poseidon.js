@@ -208,35 +208,34 @@ export class DF{
 							this._groupOnAllColsGreedyRepl(replVal)
 							this._groupOnAllRowsGreedyRepl(replVal)
 						}
-
 					}else if(!replVal){
 						if(rFirst){
-
-
+							this._groupOnAllRowsGreedy()
+							this._groupOnAllColsGreedy()
 						}else{
-
+							this._groupOnAllColsGreedy()
+							this._groupOnAllRowsGreedy()
 						}
-
 					}else{
 						throw Error("replVal needs to be a string or undefined")
 					}
 				}else if(Number.isInteger(maxrc)){
 					if(typeof replVal === 'string'){
 						if(rFirst){
-
-
+							this._groupOnAllRowsRepl(maxrc, replVal)
+							this._groupOnAllColsRepl(maxrc, replVal)
 						}else{
-
+							this._groupOnAllColsRepl(maxrc, replVal)
+							this._groupOnAllRowsRepl(maxrc, replVal)
 						}
-
 					}else if(!replVal){
 						if(rFirst){
-
-
+							this._groupOnAllRows(maxrc)
+							this._groupOnAllCols(maxrc)
 						}else{
-
+							this._groupOnAllCols(maxrc)
+							this._groupOnAllRows(maxrc)
 						}
-
 					}else{
 						throw Error("replVal needs to be a string or undefined")
 					}
@@ -246,7 +245,6 @@ export class DF{
 			}else{
 				throw Error("indexName needs to be defined as a string or as undefined")
 			}
-
 		}else{
 			throw Error("rc must be row, col, or undefined")
 		}
