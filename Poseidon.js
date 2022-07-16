@@ -60,17 +60,17 @@ export class DF{
 			if(typeof indexName === 'string'){
 				if(maxrc=='greedy'){
 					if(typeof replVal === 'string'){
-						this._groupOnRowIndexGreedyRepl(indexName, replVal)
+						_df._groupOnRowIndexGreedyRepl(indexName, replVal)
 					}else if(!replVal){
-						this._groupOnRowIndexGreedy(indexName)
+						_df._groupOnRowIndexGreedy(indexName)
 					}else{
 						throw Error("replVal needs to be a string or undefined")
 					}
 				}else if(Number.isInteger(maxrc)){
 					if(typeof replVal === 'string'){
-						this._groupOnRowIndexRepl(indexName, maxrc, replVal)
+						_df._groupOnRowIndexRepl(indexName, maxrc, replVal)
 					}else if(!replVal){
-						this._groupOnRowIndex(indexName, maxrc)
+						_df._groupOnRowIndex(indexName, maxrc)
 					}else{
 						throw Error("replVal needs to be a string or undefined")
 					}
@@ -81,17 +81,17 @@ export class DF{
 			}else if(!indexName){
 				if(maxrc=="greedy"){
 					if(typeof replVal === 'string'){
-						this._groupOnAllRowsGreedyRepl(replVal)
+						_df._groupOnAllRowsGreedyRepl(replVal)
 					}else if(!replVal){
-						this._groupOnAllRowsGreedy()
+						_df._groupOnAllRowsGreedy()
 					}else{
 						throw Error("replVal needs to be a string or undefined")
 					}
 				}else if(Number.isInteger(maxrc)){
 					if(typeof replVal === 'string'){
-						this._groupOnAllRowsRepl(maxrc, replVal)
+						_df._groupOnAllRowsRepl(maxrc, replVal)
 					}else if(!replVal){
-						this._groupOnAllRows(maxrc)
+						_df._groupOnAllRows(maxrc)
 					}else{
 						throw Error("replVal needs to be a string or undefined")
 					}
@@ -101,7 +101,6 @@ export class DF{
 			}else{
 				throw Error("indexName needs to be defined as a string or as undefined")
 			}
-
 		}else if(rc=='col'){
 			if(typeof indexName === 'string'){
 				if(maxrc=='greedy'){

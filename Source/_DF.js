@@ -2,23 +2,27 @@ class _DF{
 	constructor(){
 
 	}
+	_groupOnRowIndexGreedyRepl(indexName, replVal){}
+	_groupOnRowIndexGreedy(indexName){}
+	_groupOnRowIndexRepl(indexName, maxrc, replVal){}
+	_groupOnRowIndex(indexName, maxrc){}
+	_groupOnAllRowsGreedyRepl(replVal){}
+	_groupOnAllRowsGreedy(){}
+	_groupOnAllRowsRepl(maxrc, replVal){}
+	_groupOnAllRows(maxrc){}
 
+	_groupOnColIndexGreedyRepl(indexName, replVal){}
+	_groupOnColIndexGreedy(indexName){}
+	_groupOnColIndexRepl(indexName, maxrc, replVal){}
+	_groupOnColIndex(indexName, maxrc){}
+	_groupOnAllColsGreedyRepl(replVal){}
+	_groupOnAllColsGreedy(){}
+	_groupOnAllColsRepl(maxrc, replVal){}
+	_groupOnAllCols(maxrc){}
 
-
-	_groupOnCol(colIndex, maxRow, replVal){
-		//groups one column at a time
-		//if replVal is specified, it will replace the value of the group index values
-		//	if it is not, it will group only on a named index value
-	}
-	_groupOnRow(rowIndex, maxCol, repVal){
-		//groups one row at a time
-	}
-
-	 
 	_getRowsOn(rowIndex){
 		//
 	}
-
 	_getColsOn(colIndex){
 
 	}
