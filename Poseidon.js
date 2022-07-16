@@ -1,7 +1,8 @@
 export class df{
 	constructor(){
 		this.df=undefined;
-
+		//phaseology is a concept where you chain functions together and 
+		//see their phases in a scrollable list (in some sort of notebook)
 	}
 	read(rc){
 
@@ -10,7 +11,7 @@ export class df{
 
 	}
 	slice(rc){
-		
+
 	}
 	dice(rc){
 		//shuffles a slice
