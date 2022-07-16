@@ -5,7 +5,7 @@ class _Series{
     }
 
     check(data){
-
+        
     }
 
 }
@@ -16,10 +16,10 @@ class _Series{
 //}
 
 //"that's how it looks in a dataframe" row or column with a comma, but not both
-//  '[r],[c]': {
-//              "metadata":{},
-//              "indexName":[]
-//         }
+//  ',2': {
+//      "metadata":{},
+//      "rc":[]
+//  }
 
 //We don't need data to be redundant, we can just look twice
 //If we want to reason about rows, we can just put it in the row series
