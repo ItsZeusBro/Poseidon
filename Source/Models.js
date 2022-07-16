@@ -21,7 +21,7 @@
 //is a lot of space between the predictions made by the model)
 //(High Bias for a variable x means that when it is trained on each of these
 //similar training sets, the prediction is consistently wrong in the case of
-//a classification problem with three or more classification outputs)
+//a classification problem with three or more classification outputs) 
 //2) Complexity (how well the algorithm learns at scale)
 //3) Dimensionality of input space (this means your transformations should
 //yield a vector of dimensions n that is computable and supported by the algorithm)
