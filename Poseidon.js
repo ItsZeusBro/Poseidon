@@ -53,7 +53,7 @@ export class df{
 		//2. Some rc values are recorded in time
 		//3. There are a variety of different time formats 
 		//Things we can do:
-		//1. Normalize time accross an index
+		//1. Normalize time accross an index (changing the time format, or reducing precision)
 		//2. Interpolate time values based on different average techniques(simple averages, moving averages, etc)
 		//3. generalize the data over arbitrary time windows
 		//4. merging new rows based on time index
