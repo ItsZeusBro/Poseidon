@@ -25,7 +25,7 @@ export class df{
 	}
 
 	find(rc, value, n, m){
-		//if rc was r or c, and value was specified, it would search
+		//if rc was r or c , and value was specified, it would search
 		//	for the value rowise or columnwise and return the row or col associated
 		//	if found using r, it would return all columns associated
 		//	if found using c, it would return all rows associated
@@ -34,8 +34,10 @@ export class df{
 		//begining of n m as 0,0
 	}
 
-	sort(){
-
+	sort(rc, index, reverse=false){
+		//if strings, sorts alphabetically
+		//if numbers, sorts numerically
+		//if rowStep, (if you have the same values in row one, sort those rows on row 2, etc)
 	}
 	apply(){
 
